@@ -55,7 +55,7 @@ console.log(newArray);
       <img className='flex-item flex-item-3' src={filtered.value} />
     ))}
     {newArray.filter(info => info.key === 'newsBody').map((filtered) =>(
-      // we use the dangerouslySetInnerHTML to render html encoded within text
+      //  we use the dangerouslySetInnerHTML to render html encoded within text
         <div className='flex-item flex-item-4' dangerouslySetInnerHTML={{__html: filtered.value}}>
         </div>
       ))}

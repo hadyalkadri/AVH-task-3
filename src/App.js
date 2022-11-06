@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'; 
 import Card from './components/Card';
+import CardTwo from './components/CardTwo';
 import NavBar from './components/NavBar';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BounceLoader from 'react-spinners/BounceLoader';
-import CardTwo from './components/CardTwo';
+import {Route, Link, Routes} from 'react-router-dom';
 
 
 
@@ -17,7 +18,7 @@ function App() {
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(true);
   const [push, setPush] = useState(false);
-  const [magic, setMagic] = useState(false);
+  const [magic, setMagic] = useState(true);
 
   useEffect(() => {
     fetchAPI();
@@ -54,6 +55,7 @@ function App() {
       .then(
         (APi) => {
           setDisplay(APi);
+          setMagic(false)
         }
       )
     
@@ -82,16 +84,21 @@ function App() {
     <div className='main'>
         <NavBar />
         <Header />
-        {loading ? <BounceLoader color='white' style={{'position': 'relative', 'left': '630px'}}/>
+        <Routes>
+        <Route exact path='/newsCenter2' element= {loading ? <BounceLoader color='white' style={{'position': 'relative', 'left': '630px'}}/>
         :
         <Card 
           data = {data}
           show = {show}
           setShow = {setShow}
-        />}
-        <CardTwo 
-          display = {display}
+        />}>
+    
+        </Route>
+       <Route exact path='/newsCenter' element= {magic ? <BounceLoader color='white' style={{'position': 'relative', 'left': '630px'}} />
+       :
+       <CardTwo display = {display}/>}
         />
+        </Routes>
         {/* {magic ? : null}
         <button onClick={() => {displayCard('http://45.9.190.133:6339/avh/api/avhNews'); setMagic(true)}}>Magic Button</button> */}
     <Footer 

@@ -67,8 +67,16 @@ body{
 }
 
 
+.link-a{
+    text-decoration: none;
+    color: white;
+}
 
-
+.link-a:hover{
+    text-decoration: none;
+    color: white;
+    filter: opacity(0.8);
+}
 
 .logo{
     width: 250px; 
@@ -173,10 +181,12 @@ body{
 
 .title-0{
     color: white;
+    text-transform: uppercase;
 }
 
 .title-1{
     color: #85ffbd;
+    text-transform: uppercase;
 }
 
 
@@ -188,19 +198,29 @@ body{
 }
 
 .flex-item-0{
-    margin-left: 33%;
+    position: relative;
+    bottom: 100px;
+    padding-left: 100px;
+    background-color: #1F1B1B;
+    border: 2px solid #000;
 }
 
 .flex-item-1{
     display: flex;
     flex-direction: row;
     margin-bottom: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .flex-item-1a > h4{
     color: white;
 }
 
+.flex-item-2{
+    padding-left: 100px;
+    padding-right: 100px;
+}
 
 .flex-item-3{
     margin-top: 30px;
@@ -215,7 +235,7 @@ body{
 }
 
 .flex-item-4{
-    padding: 10px;
+    padding: 100px;
     color: white;
     filter: opacity(0.3);
 }

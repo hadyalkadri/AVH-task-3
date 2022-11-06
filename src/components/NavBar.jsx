@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
+import {Link} from 'react-router-dom';
 //${style ? 'navbarConditional': null}
 function NavBar() {
 
@@ -27,10 +28,10 @@ function NavBar() {
           <a className='navHeader' href="#skills">Buisness</a>
         </li>
         <li className="nav-item">
-          <a className='navHeader' href="#news-center">News-center</a>
+          <a className='navHeader' href="#news-center"><Link className = 'link-a' to='/newsCenter'> News-center</Link></a>
         </li>
         <li className="nav-item">
-          <a className='navHeader' href="#skills">Careers</a>
+          <a className='navHeader' href="#skills"><Link className='link-a' to='/newsCenter2'>News-center-2</Link></a>
         </li>
       </ul>
       
