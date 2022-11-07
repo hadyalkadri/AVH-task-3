@@ -2,6 +2,9 @@ import React from 'react';
 import {FaFacebookSquare, FaLinkedin, FaInstagramSquare, FaTwitter} from "react-icons/fa"
 
 function Footer({push}) {
+  let iconStyles = {
+    fontSize: '25px'                      
+}
   return (
     <div>
 
@@ -15,10 +18,10 @@ function Footer({push}) {
                 <li>Careers</li>    
             </ul>
         <div className='footerIcons'>
-            <FaFacebookSquare className='icons'/>
-            <FaInstagramSquare className='icons' />
-            <FaTwitter className='icons' />
-            <FaLinkedin className='icons' />
+            <FaFacebookSquare style={iconStyles} className='icons'/>
+            <FaInstagramSquare style={iconStyles} className='icons' />
+            <FaTwitter style={iconStyles} className='icons' />
+            <FaLinkedin style={iconStyles} className='icons' />
         </div>
         </div>
         </div>

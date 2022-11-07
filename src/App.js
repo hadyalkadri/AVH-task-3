@@ -85,7 +85,7 @@ function App() {
         <NavBar />
         <Header />
         <Routes>
-        <Route exact path='/newsCenter2' element= {loading ? <BounceLoader color='white' style={{'position': 'relative', 'left': '630px'}}/>
+        <Route exact path='/newsCenter' element= {loading ? <BounceLoader color='white' style={{'position': 'relative', 'left': '630px'}}/>
         :
         <Card 
           data = {data}
@@ -94,7 +94,7 @@ function App() {
         />}>
     
         </Route>
-       <Route exact path='/newsCenter' element= {magic ? <BounceLoader color='white' style={{'position': 'relative', 'left': '630px'}} />
+       <Route exact path='/newsCenter2' element= {magic ? <BounceLoader color='white' style={{'position': 'relative', 'left': '630px'}} />
        :
        <CardTwo display = {display}/>}
         />

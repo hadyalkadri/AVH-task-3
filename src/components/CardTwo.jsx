@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {FaFacebookSquare, FaLinkedin, FaInstagramSquare, FaTwitter} from "react-icons/fa"
 
 function CardTwo({display}) {
 
@@ -25,7 +26,11 @@ console.log(newArray);
   
 
   // Object.assign(arrayObjects, {prop1: sth[0], prop2: sth[1]})
-
+  let iconStyles = {
+    fontSize: '28px',
+    marginLeft: '27px',
+    color: 'white'                      
+}
   return (
     <div className='flexBox'>
         {  Object.entries(display).map((sth) => {
@@ -43,6 +48,13 @@ console.log(newArray);
           <div className='flex-item-1a'>
           <h6>Author</h6>
           <h4>{filtered.value}</h4>
+          <div className='articleIcons'>
+          <h6>Share this article</h6>
+            <FaFacebookSquare style={iconStyles}/>
+            <FaInstagramSquare style={iconStyles}/>
+            <FaTwitter style={iconStyles}/>
+            <FaLinkedin style={iconStyles}/>
+        </div>
           </div>
         </div>
       ))}
@@ -63,5 +75,4 @@ console.log(newArray);
  
   )
 }
-//<React.Fragment>{content.map((sth) => <h1 key={content.}>{sth.greenTitle}</h1>)}</React.Fragment>
 export default CardTwo
